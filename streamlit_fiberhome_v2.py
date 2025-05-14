@@ -4,7 +4,7 @@ import time
 import re
 
 # Configuração da interface do Streamlit
-st.set_page_config(page_title="Provisionamento OLT Fiberhome", page_icon="🖥", layout="wide")
+st.set_page_config(page_title="Provisionamento OLT Fiberhome", page_icon="🖥️", layout="wide")
 st.title("🖥 Provisionamento OLT Fiberhome")
 st.markdown("""
 <style>
@@ -38,19 +38,19 @@ senha_enable = st.sidebar.text_input("Senha enable:", type="password")
 
 # Endereços IP e seus respectivos nomes pré-definidos da OLT Fiberhome
 enderecos_ip = {
-    "🖥  OLT PINHEIRO 🖥": "172.31.255.3",
-    "🖥  OLT SÃO LUIS 🖥": "172.30.247.100",
-    "🖥  OLT SAO BENTO 🖥": "172.31.254.2",
-    "🖥  OLT TURIACU 🖥": "172.31.200.254",
-    "🖥  OLT VILA DA PAZ 🖥": "172.31.187.2",
-    "🖥  OLT SANTA HELENA 🖥": "172.30.253.254",
-    "🖥  OLT PEDRO DO ROSARIO 🖥": "172.31.246.2",
-    "🖥  OLT PACAS 🖥": "172.31.191.2",
-    "🖥  OLT PRESIDENTE SARNEY 🖥": "172.31.252.3",
-    "🖥  OLT CONECTA 🖥": "177.66.195.157",
-    "🖥  OLT SLP 🖥": "172.31.254.2",
-    "🖥  OLT MHZ 🖥": "172.16.0.2",
-    "🖥  OLT GNF 🖥": "172.31.253.2"
+    "🖥️  OLT PINHEIRO ➡️": "172.31.255.3",
+    "🖥️  OLT SÃO LUIS ➡️": "172.30.247.100",
+    "🖥️  OLT SAO BENTO ➡️": "172.31.254.2",
+    "🖥️  OLT TURIACU ➡️": "172.31.200.254",
+    "🖥️  OLT VILA DA PAZ ➡️": "172.31.187.2",
+    "🖥️  OLT SANTA HELENA ➡️": "172.30.253.254",
+    "🖥️  OLT PEDRO DO ROSARIO ➡️": "172.31.246.2",
+    "🖥️  OLT PACAS ➡️": "172.31.191.2",
+    "🖥️  OLT PRESIDENTE SARNEY ➡️": "172.31.252.3",
+    "🖥️  OLT CONECTA ➡️": "177.66.195.157",
+    "🖥️  OLT SLP ➡️": "172.31.254.2",
+    "🖥️  OLT MHZ ➡️": "172.16.0.2",
+    "🖥️  OLT GNF ➡️": "172.31.253.2"
 }
 
 st.sidebar.subheader("Selecione a OLT")
