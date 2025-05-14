@@ -6,6 +6,9 @@ st.set_page_config(page_title="Provisionamento OLT Huawei", page_icon="🖥️",
 st.title("🖥️ Provisionamento OLT Huawei")
 st.markdown("""
 <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
     .stButton > button {
         background-color: #4CAF50;
         color: white;
@@ -18,11 +21,25 @@ st.markdown("""
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    .stButton > button:hover {
+        background-color: #45a049;
     }
     .stTextInput > div > input {
         border: 2px solid #4CAF50;
         border-radius: 8px;
         padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    @media (max-width: 768px) {
+        .stButton > button {
+            width: 100%;
+        }
+        .stTextInput > div > input {
+            font-size: 14px;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -50,7 +67,7 @@ host = enderecos_ip[endereco_escolhido]
 
 # Campos para dados de provisionamento
 st.header("📋 Dados de Provisionamento")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
     slot_value = st.text_input("SLOT:")
@@ -66,7 +83,6 @@ with col3:
     onu_value = st.text_input("ID ONU:")
 
 # Separando a lógica de conexão Telnet para cada funcionalidade
-
 def conectar_telnet(host, port, usuario, senha):
     tn = telnetlib.Telnet(host, port)
     tn.read_until(b"User name:")
