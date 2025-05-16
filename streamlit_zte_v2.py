@@ -6,23 +6,51 @@ st.set_page_config(page_title="Provisionamento OLT ZTE", page_icon="🖥", layou
 st.title("🖥 Provisionamento OLT ZTE")
 st.markdown("""
 <style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background-color: #800080; /* Cor de fundo roxa */
+        color: #ffffff; /* Texto branco para contraste */
+    }
     .stButton > button {
-        background-color: #4CAF50;
+        background-color: #007aff; /* Azul padrão da Apple */
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 12px 24px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 12px; /* Bordas arredondadas maiores */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .stButton > button:hover {
+        background-color: #005bb5; /* Azul mais escuro ao passar o mouse */
+        transform: scale(1.05); /* Leve aumento ao passar o mouse */
     }
     .stTextInput > div > input {
-        border: 2px solid #4CAF50;
-        border-radius: 8px;
-        padding: 10px;
+        border: 2px solid #007aff;
+        border-radius: 12px;
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #333333;
+    }
+    .stTextInput > div > input:focus {
+        border-color: #005bb5;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 91, 181, 0.5);
+    }
+    @media (max-width: 768px) {
+        .stButton > button {
+            width: 100%;
+        }
+        .stTextInput > div > input {
+            font-size: 14px;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
